@@ -11,14 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chemerisuk/cordova-plugin-geocoder.git"
+    "url": "git+https://github.com/Srini-max/cordova-plugin-geocoder.git"
   },
-  "author": "Maksim Chemerisuk <chemerisuk@gmail.com> (https://github.com/chemerisuk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chemerisuk/cordova-plugin-geocoder/issues"
+    "url": "https://github.com/Srini-max/cordova-plugin-geocoder/issues"
   },
-  "homepage": "https://github.com/chemerisuk/cordova-plugin-geocoder#readme",
+  "homepage": "https://github.com/Srini-max/cordova-plugin-geocoder#readme",
   "keywords": [
     "cordova",
     "geocode",

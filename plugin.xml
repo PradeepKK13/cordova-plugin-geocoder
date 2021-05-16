@@ -7,8 +7,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <description>Native geocoder for Cordova</description>
     <license>MIT</license>
     <keywords>cordova</keywords>
-    <repo>https://github.com/chemerisuk/cordova-plugin-geocoder</repo>
-    <issue>https://github.com/chemerisuk/cordova-plugin-geocoder/issues</issue>
+   
 
     <js-module src="www/GeocoderPlugin.js" name="GeocoderPlugin">
         <merges target="cordova.plugins.geocoder" />
@@ -34,7 +33,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="GeocoderPlugin">
-                <param name="android-package" value="by.chemerisuk.cordova.geocoder.GeocoderPlugin" />
+                <param name="android-package" value="cordova.geocoder.GeocoderPlugin" />
             </feature>
         </config-file>
 
@@ -45,7 +44,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <dependency id="cordova-support-android-plugin" version="~1.0.0"/>
 
         <source-file src="src/android/GeocoderPlugin.java"
-            target-dir="src/by/chemerisuk/cordova/geocoder/" />
+            target-dir="src/cordova/geocoder/" />
     </platform>
 
 </plugin>

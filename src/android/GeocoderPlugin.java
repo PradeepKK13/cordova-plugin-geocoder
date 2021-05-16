@@ -1,19 +1,4 @@
-package cordova.geocoder;
-
-import android.content.Context;
-import android.location.Address;
-import android.location.Geocoder;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
-import org.apache.cordova.CallbackContext;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
+package cordova.plugin.nativegeocoder;
 
 import android.content.Context;
 import android.location.Address;
@@ -31,6 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.List;
 import java.util.Locale;
+
 
 class NativeGeocoderOptions {
     boolean useLocale = true;

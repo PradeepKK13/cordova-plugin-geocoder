@@ -36,7 +36,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
      <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="NativeGeocoder">
-                <param name="android-package" value="cordova.plugin.nativegeocoder.NativeGeocoder" />
+                <param name="android-package" value="cordova.plugin.nativegeocoder.GeocoderPlugin" />
             </feature>
         </config-file>
 
@@ -45,7 +45,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
 
-        <source-file src="src/android/NativeGeocoder.java" target-dir="src/cordova/plugin/nativegeocoder" />
+        <source-file src="src/android/GeocoderPlugin.java" target-dir="src/cordova/plugin/GeocoderPlugin" />
     </platform>
 
 </plugin>

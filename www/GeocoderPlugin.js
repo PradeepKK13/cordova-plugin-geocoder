@@ -1,15 +1,17 @@
-var exec = require("cordova/exec");
-var PLUGIN_NAME = "GeocoderPlugin";
 
-module.exports = {
-    geocode: function(locationName, options) {
-        return new Promise(function(resolve, reject) {
-            exec(resolve, reject, PLUGIN_NAME, "geocode", [locationName, options || {}]);
-        });
-    },
-    reverseGeocode: function(latitude, longitude, options) {
-        return new Promise(function(resolve, reject) {
-            exec(resolve, reject, PLUGIN_NAME, "reverseGeocode", [latitude, longitude, options || {}]);
-        });
+
+cordova.addConstructor(function() {
+    function GeocoderPlugin() {
+
     }
-};
+
+    GeocoderPlugin.prototype.geocode = function( locationName, options, successCallback, errorCallback ){
+        cordova.exec(successCallback, errorCallback, "GeocoderPlugin", "geocode", [locationName, options || {}]);
+    }
+  GeocoderPlugin.prototype.reverseGeocode = function( latitude, longitude, options, successCallback, errorCallback ){
+        cordova.exec(successCallback, errorCallback, "GeocoderPlugin", "geocode", [latitude, longitude, options || {}]);
+    }
+   
+    window.GeocoderPlugin = new GeocoderPlugin()
+    return window.GeocoderPlugin
+});

@@ -8,10 +8,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <license>MIT</license>
     <keywords>cordova</keywords>
    
+  <js-module src="www/GeocoderPlugin.js" name="GeocoderPlugin">
+        <runs/>
 
-    <js-module src="www/GeocoderPlugin.js" name="GeocoderPlugin">
-        <merges target="cordova.plugins.geocoder" />
-    </js-module>
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="GeocoderPlugin" />
+      </js-module>
+
 
     <engines>
         <engine name="cordova" version=">=7.1.0"/>

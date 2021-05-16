@@ -24,7 +24,7 @@ class NativeGeocoderOptions {
     int maxResults = 1;
 }
 
-public class NativeGeocoder extends CordovaPlugin {
+public class GeocoderPlugin extends CordovaPlugin {
     private Geocoder geocoder;
 
     @Override

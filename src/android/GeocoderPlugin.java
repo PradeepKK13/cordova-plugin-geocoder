@@ -1,4 +1,4 @@
-package by.chemerisuk.cordova.geocoder;
+package cordova.geocoder;
 
 import android.content.Context;
 import android.location.Address;

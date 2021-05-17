@@ -9,7 +9,7 @@ cordova.addConstructor(function() {
         cordova.exec(successCallback, errorCallback, "GeocoderPlugin", "geocode", [locationName, options || {}]);
     }
   GeocoderPlugin.prototype.reverseGeocode = function( latitude, longitude, options, successCallback, errorCallback ){
-        cordova.exec(successCallback, errorCallback, "GeocoderPlugin", "geocode", [latitude, longitude, options || {}]);
+        cordova.exec(successCallback, errorCallback, "GeocoderPlugin", "reverseGeocode", [latitude, longitude, options || {}]);
     }
    
     window.GeocoderPlugin = new GeocoderPlugin()

@@ -39,6 +39,8 @@ public class GeocoderPlugin extends CordovaPlugin {
         if (action.equals("reverseGeocode")) {
             double latitude = args.getDouble(0);
             double longitude = args.getDouble(1);
+            Log.d("latitude", latitude);
+                        Log.d("longitude", longitude);
             JSONObject options = null;
             try {
                 options = args.getJSONObject(2);
@@ -72,7 +74,7 @@ public class GeocoderPlugin extends CordovaPlugin {
      * @param callbackContext CallbackContext
      */
     private void reverseGeocode(double latitude, double longitude, JSONObject options, CallbackContext callbackContext) {
-
+                        Log.d("Entered GeoCode function");
         if (latitude == 0 || longitude == 0) {
             PluginResult r = new PluginResult(PluginResult.Status.ERROR, "Expected two non-empty double arguments.");
             callbackContext.sendPluginResult(r);
@@ -93,7 +95,7 @@ public class GeocoderPlugin extends CordovaPlugin {
             if (geoResults.size() > 0) {
                 int maxResultObjects = geoResults.size() >= geocoderOptions.maxResults ? geoResults.size() : geoResults.size();
                 JSONArray resultObj = new JSONArray();
-
+                Log.d("geoResults", geoResults);
                 for (int i = 0; i < maxResultObjects; i++) {
                     Address address = geoResults.get(i);
 

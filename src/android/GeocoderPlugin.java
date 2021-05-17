@@ -16,6 +16,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.List;
 import java.util.Locale;
+import java.util.Arrays;
+import java.util.Optional;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 
 
 class NativeGeocoderOptions {
@@ -39,6 +45,8 @@ public class GeocoderPlugin extends CordovaPlugin {
         if (action.equals("reverseGeocode")) {
             double latitude = args.getDouble(0);
             double longitude = args.getDouble(1);
+                                        Log.d("latitude", latitude);
+ Log.d("longitude", longitude);
             JSONObject options = null;
             try {
                 options = args.getJSONObject(2);

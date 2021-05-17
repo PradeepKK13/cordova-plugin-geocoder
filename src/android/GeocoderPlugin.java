@@ -45,8 +45,8 @@ public class GeocoderPlugin extends CordovaPlugin {
         if (action.equals("reverseGeocode")) {
             double latitude = args.getDouble(0);
             double longitude = args.getDouble(1);
-                                        Log.d("latitude", latitude);
- Log.d("longitude", longitude);
+                                        Log.d("latitude", Double.toString(latitude));
+ Log.d("longitude", Double.toString(longitude));
             JSONObject options = null;
             try {
                 options = args.getJSONObject(2);
